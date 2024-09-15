@@ -5,21 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        #fruits-title{
+            color: whitesmoke;
+        }
+        #places-title{
+            color: whitesmoke;
+        }
+        .fav-place{
+            color: aquamarine;
+        }
+    </style>
 </head>
 <body>
     <h1>DOM dere babaa</h1>
     <h1>DOM dere babaa</h1>
     <main>
-        <h1>My awesome dom baba </h1>
+        <section>
+          <h1>My awesome dom baba </h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias aliquid eligendi fuga quisquam alias, delectus doloribus, blanditiis a deserunt nobis laboriosam expedita animi soluta quasi officiis suscipit dicta, aut quidem?</p>
         <ul>
             <li>Jalali set</li>
             <li>Shafayet</li>
             <li>Bonobash</li>
             <li>Dom dere Baba</li>
-        </ul>
+        </ul>  
+        </section>
+        <section>
+            <h1 id="fruits-title">My Fruits Section</h1>
+            <ul>
+                <li>Mango</li>
+                <li>Orange</li>
+                <li>Apple</li>
+                <li>Anar</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">Places I would Like To Visit</h1>
+            <ul>
+                <li class="fav-place">SaintMartin</li>
+                <li class="fav-place">CoxBazars</li>
+                <li class="fav-place">Shajek</li>
+                <li>Bandarban</li>
+            </ul>
+        </section>
     </main>
+
+
+
+
+
+
+
+
+
+
+
     <script src="script.js"></script>
     <script>
+        const fruitsTitle = document.getElementById('fruits-title') ;
+        fruitsTitle.innerText = 'Changed Fruits'
         const liCollection = document.getElementsByTagName('li');
         for(const li of liCollection){
             console.log(li.innerText);
@@ -27,6 +72,10 @@
         const allHeading1 = document.getElementsByTagName('h1');
         for( const h1 of allHeading1){
             console.log(h1.innerText);
+        }
+        const places = document.getElementsByClassName('fav-place');
+        for(const place of places){
+            console.log(place.innerText);
         }
     </script>
 </body>
